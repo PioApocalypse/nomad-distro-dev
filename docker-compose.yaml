@@ -50,6 +50,12 @@ services:
       - 9200:9200
     volumes:
       - nomad_elastic:/usr/share/elasticsearch/data
+    # Pio: uncomment if and you want to launch oasis with low resources
+    #deploy:
+    #  resources:
+    #    limits:
+    #      memory: 512M
+    #      cpus: "1.0"
 
   # the user data db
   mongo:
